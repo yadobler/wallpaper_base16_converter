@@ -1,7 +1,14 @@
 Usage:
 
 ```
-python base16_quantizer.py wallpaper.jpg theme.conf output.png --threshold 40
+# Basic quantization
+python base16_quantizer.py wallpaper.jpg theme.conf out.png
+
+# Collapse dark pixels below brightness 40
+python base16_quantizer.py wallpaper.jpg theme.conf out.png --threshold 40
+
+# Highlight edges using $foreground (with optional edge threshold)
+python base16_quantizer.py wallpaper.jpg theme.conf out.png --edges --edge-strength 25
 ```
 
 - Omit --threshold to disable collapsing.
